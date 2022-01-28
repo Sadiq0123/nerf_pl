@@ -151,7 +151,7 @@ class NeRFSystem(LightningModule):
 if __name__ == '__main__':
     hparams = get_opts()
     system = NeRFSystem(hparams)
-    checkpoint_callback = ModelCheckpoint(filepath=os.path.join(f'ckpts/{hparams.exp_name}',
+    checkpoint_callback = ModelCheckpoint(filepath=os.path.join(f'/content/drive/MyDrive/IDP_4th_year/1.Implementation/ckpts/{hparams.exp_name}',
                                                                 '{epoch:d}'),
                                           monitor='val/loss',
                                           mode='min',
